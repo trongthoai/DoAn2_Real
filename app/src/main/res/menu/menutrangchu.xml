@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="Search"
+        android:id="@+id/itSearch"
+        android:icon="@drawable/ic_search_2x"
+        android:visible="false"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/itGioHang"
+        android:title="Giỏ hàng"
+        android:icon="@drawable/ic_shopping_cart_white_2x"
+        app:showAsAction="always"
+        app:actionLayout="@layout/custom_item_giohang"
+        />
+    <item
+        android:icon="@drawable/ic_more_vert_white"
+        android:title="more"
+        app:showAsAction="always"
+        >
+        <menu>
+            <item android:id="@+id/itDangNhap"
+                android:title="Đăng nhập"
+                android:icon="@drawable/login"/>
+            <item android:id="@+id/itThongBao"
+                android:title="Thông báo"
+                android:icon="@drawable/bell"/>
+            <item android:id="@+id/itLike"
+                android:title="Yêu thích"
+                android:icon="@drawable/heart"/>
+            <item android:id="@+id/itBill"
+                android:title="Đơn hàng"
+                android:icon="@drawable/bill"/>
+            <item android:id="@+id/itSetting"
+                android:title="Cài đặt"
+                android:icon="@drawable/setting"/>
+            <item android:id="@+id/itLaw"
+                android:title="Chính sách"
+                android:icon="@drawable/law"/>
+            <item android:id="@+id/itQuestion"
+                android:title="Trợ giúp"
+                android:icon="@drawable/question"/>
+
+
+        </menu>
+    </item>
+</menu>
