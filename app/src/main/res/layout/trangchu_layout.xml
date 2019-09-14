@@ -25,11 +25,11 @@
               <Button
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
-                  android:drawableLeft="@drawable/ic_search_2x"
+                  android:drawableLeft="@drawable/ic_search"
                   android:text="Tìm kiếm trên LAZADA"
                   android:layout_gravity="center"
                   android:textAllCaps="false"
-                  android:textSize="20dp"
+                  android:textSize="15dp"
                   android:layout_weight="1"
                   android:background="@color/colorwhite"
                   android:textAlignment="viewStart"
@@ -48,15 +48,28 @@
                   android:background="@color/colorwhite"
                   android:src="@drawable/ic_photo_camera_black_24dp"/>
           </LinearLayout>
-          <com.google.android.material.tabs.TabLayout
-              android:id="@+id/tabs"
-              android:layout_width="match_parent"
-              app:tabMode="scrollable"
-              android:layout_height="wrap_content"/>
+
       </LinearLayout>
+
   </com.google.android.material.appbar.AppBarLayout>
-    <androidx.viewpager.widget.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/viewpager"
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       >
+       <FrameLayout
+           android:id="@+id/fragmentcontainer"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_above="@id/bottom_navigation"/>
+       <com.google.android.material.bottomnavigation.BottomNavigationView
+           android:id="@+id/bottom_navigation"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:itemIconTint="@color/lacivert"
+           app:itemTextColor="@color/lacivert"
+           android:background="?android:attr/windowBackground"
+           android:layout_alignParentBottom="true"
+           app:menu="@menu/bottommenu"/>
+   </RelativeLayout>
+
 </LinearLayout>
