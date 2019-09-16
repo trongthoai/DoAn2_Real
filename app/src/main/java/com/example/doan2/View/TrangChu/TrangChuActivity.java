@@ -17,11 +17,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.doan2.Adapter.ViewPagerAdapter;
 import com.example.doan2.R;
-import com.example.doan2.View.TrangChu.Fragment.FBlog;
-import com.example.doan2.View.TrangChu.Fragment.FGoiY;
-import com.example.doan2.View.TrangChu.Fragment.FPoint;
-import com.example.doan2.View.TrangChu.Fragment.FPointStore;
-import com.example.doan2.View.TrangChu.Fragment.FlashSale;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -40,7 +36,7 @@ public class TrangChuActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         BottomNavigationView  bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentcontainer,new FlashSale()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentcontainer,new Fragment_FlashSale()).commit();
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -49,16 +45,16 @@ public class TrangChuActivity extends AppCompatActivity {
                     Fragment selectedFragment = null;
                     switch (menuItem.getItemId()){
                         case R.id.nav_home:
-                            selectedFragment = new FlashSale();
+                            selectedFragment = new Fragment_FlashSale();
                             break;
                         case R.id.nav_user:
-                            selectedFragment = new FBlog();
+                            selectedFragment = new FragmentFB();
                             break;
-                        case R.id.nav_notification:
-                            selectedFragment = new FPointStore();
+                        case R.id.nav_notifications:
+                            selectedFragment = new FragmentFPoint();
                             break;
                         case R.id.nav_cart:
-                            selectedFragment = new FGoiY();
+                            selectedFragment = new FragmentGoiY();
                             break;
 
                     }
